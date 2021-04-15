@@ -6,18 +6,18 @@ y = 20
 # Comparison Operators (==, !=, >, <, >=, <=) - Used to compare values
 
 # Simple if
-if x > y:
-  print(f'{x} is greater than {y}')
+if x > y:                           #next line must be indented!
+  print(f'{x} is greater than {y}') #21 is greater than 20
 
 # If/else
 if x > y:
-  print(f'{x} is greater than {y}')
+  print(f'{x} is greater than {y}') #21 is greater than 20
 else:
   print(f'{y} is greater than {x}')  
 
 # elif
 if x > y:
-  print(f'{x} is greater than {y}')
+  print(f'{x} is greater than {y}') #21 is greater than 20
 elif x == y:
   print(f'{x} is equal to {y}')  
 else:
@@ -26,7 +26,7 @@ else:
 # Nested if
 if x > 2:
   if x <= 10:
-    print(f'{x} is greater than 2 and less than or equal to 10')
+    print(f'{x} is greater than 2 and less than or equal to 10')  #21 is greater than 2 or less than or equal to 10
     
 
 # Logical operators (and, or, not) - Used to combine conditional statements

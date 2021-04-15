@@ -1,4 +1,6 @@
-# A Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+# A Tuple is a collection which is ordered and UNchangeable(as opposed to lists). Allows duplicate members.
+#uses () instead of [] like lists
+
 
 # Create tuple
 fruits = ('Apples', 'Oranges', 'Grapes')
@@ -8,41 +10,46 @@ fruits = ('Apples', 'Oranges', 'Grapes')
 
 # Single value needs trailing comma
 fruits2 = ('Apples',)
-
+fruits3 = ('Apples')
+print(fruits3, type(fruits3))   #Apples <class 'str">  --- if don't include trailing comma, will consider it a string
+                                #Apples <class 'tuple"> --- with trailing comma
 # Get value
-print(fruits[1])
+print(fruits[1])    #Oranges
 
 # Can't change value
-fruits[0] = 'Pears'
+fruits[0] = 'Pears'  #TypeError: 'tuple' object does not support item assignment
 
 # Delete tuple
-del fruits2
+del fruits2     #NameError: name 'fruits2' is not defined
 
 # Get length
-print(len(fruits))
+print(len(fruits))     #3
 
 
-# A Set is a collection which is unordered and unindexed. No duplicate members.
+
+
+# A Set is a collection which is UNordered and UNindexed. NO duplicate members.
+#{}
 
 # Create set
 fruits_set = {'Apples', 'Oranges', 'Mango'}
 
 # Check if in set
-print('Apples' in fruits_set)
+print('Apples' in fruits_set)   #True
 
 # Add to set
-fruits_set.add('Grape')
+fruits_set.add('Grape') #{'Apples', 'Oranges', 'Mango', 'Grape'}
 
 # Remove from set
-fruits_set.remove('Grape')
+fruits_set.remove('Grape')  #{'Apples', 'Oranges', 'Mango'}
 
 # Add duplicate
-fruits_set.add('Apples')
+fruits_set.add('Apples')    #{'Apples', 'Oranges', 'Mango'} --- no error, just doesn't add 'Apples' twice
 
 # Clear set
-fruits_set.clear()
+fruits_set.clear()  #set() --- returns an empty set, still have set just empty
 
 # Delete
-del fruits_set
+del fruits_set      #NameError: name 'fruits_set' is not defined
 
 print(fruits_set)

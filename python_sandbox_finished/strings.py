@@ -4,22 +4,23 @@ name = 'Brad'
 age = 37
 
 # Concatenate
-print('Hello, my name is ' + name + ' and I am ' + str(age))
+print('Hello, my name is ' + name + ' and I am ' + str(age)) #error if just put age - can't concatonate int
+#better ways to insert variables: string formatting
 
 # String Formatting
 
 # Arguments by position
-print('My name is {name} and I am {age}'.format(name=name, age=age))
+print('My name is {name} and I am {age}'.format(name=name, age=age)) #{name} is placeholder
 
-# F-Strings (3.6+)
-print(f'Hello, my name is {name} and I am {age}')
+# F-Strings (only available in python 3.6+)
+print(f'Hello, my name is {name} and I am {age}') #similar to JS with $
 
 # String Methods
 
 s = 'helloworld'
 
 # Capitalize string
-print(s.capitalize())
+print(s.capitalize())       #captalize =method=function
 
 # Make all uppercase
 print(s.upper())
@@ -38,7 +39,7 @@ print(s.replace('world', 'everyone'))
 
 # Count
 sub = 'h'
-print(s.count(sub))
+print(s.count(sub)) #counts number of h in string
 
 # Starts with
 print(s.startswith('hello'))
@@ -47,16 +48,16 @@ print(s.startswith('hello'))
 print(s.endswith('d'))
 
 # Split into a list
-print(s.split())
+print(s.split())        #['helloworld'], if s='hello world', then ['hello', 'world']
 
 # Find position
-print(s.find('r'))
+print(s.find('r'))      #find position of letter r (starting with 0)
 
 # Is all alphanumeric
-print(s.isalnum())
+print(s.isalnum())      #True, if s='hello world', then False b/c of space
 
 # Is all alphabetic
-print(s.isalpha())
+print(s.isalpha())      #True, if s='hello world', then False b/c of space
 
 # Is all numeric
-print(s.isnumeric())
+print(s.isnumeric())    #false
